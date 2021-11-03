@@ -12,6 +12,9 @@ struct StartButtonView: View {
     // MARK: - PROPERTIES
     
     
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    
     // MARK: - BODY
     
     
@@ -21,7 +24,7 @@ struct StartButtonView: View {
         
         Button(action: {
             
-            print("Exit the onboarding")
+            isOnboarding = false
             
             
         }) {
